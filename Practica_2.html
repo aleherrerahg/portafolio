@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 2</title>
+    <link rel="icon" type="Image/Png" href="puma_logo.png"/>
+    <style>
+        body
+        {
+           background-color: rgba(255, 255, 255, 0.37);
+        }
+        table
+        {
+            text-align: center;
+        }
+        td, th
+        {
+            width: 250px;
+            padding: 15px 90px;
+        }
+        th
+        {
+            height: 50px;
+        }
+        td
+        {
+            height: 90px;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Tienda de ropa online</h1>
+    <form action="" method="post" enctype="text/plain">
+        <fieldset>
+            <legend>Información del Cliente</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="nombre">Nombre:</label><br/><br/>
+                        <input type="text" placeholder="Nombre" maxlength="25" name="nombre" id="nombre" required/><br/><br/>
+                    </td>
+                    <td>
+                        <label for="usuario">Nombre de usuario:</label><br/><br/>
+                        <input type="text" placeholder="Usuario" maxlength="25" name="usuario" id="usuario"/><br/><br/>
+                    </td>
+                    <td>
+                        <label for="apellidom">Apellido materno:</label><br/><br/>
+                        <input type="text" placeholder="Apellido materno" maxlength="25" name="apellidom" id="apellidom" required/><br/><br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="apellidop">Apellido paterno:</label><br/><br/>
+                        <input type="text" placeholder="Apellido paterno" maxlength="25" name="apellidop" id="apellidop" required/><br/><br/>
+                    </td>
+                    <td>
+                        <label for="Contraseña">Contraseña:</label><br/><br/>
+                        <input type="password" placeholder="Contraseña" maxlength="25" name="Contraseña" id="Contraseña"/><br/><br/>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Datos de facturación</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="calle">Calle:</label><br/><br/>
+                        <input type="text" placeholder="Calle" maxlength="25" name="calle" id="calle"/><br/><br/>
+                    </td>
+                    <td>
+                        <label for="num">Num:</label><br/><br/>
+                        <input type="text" placeholder="Num.Exterior" name="num" id="num"/><br/><br/>
+                    </td>
+                    <td>
+                        <label for="colonia">Colonia:</label><br/><br/>
+                        <input type="text" placeholder="Colonia" maxlength="25" name="colonia" id="colonia"/><br/><br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">E-mail:</label><br/><br/>
+                        <input type="email" placeholder="E-mail" maxlength="25" name="email" id="email" required/><br/><br/>
+                    </td>
+                    <td>
+                        <label for="cp">Código Postal:</label><br/><br/>
+                        <input type="text" placeholder="C.P" maxlength="5" name="cp" id="cp"/><br/><br/>
+                    </td>
+                    <td>
+                        <label for="rfc">RFC:</label><br/><br/>
+                        <input type="text" placeholder="RFC" maxlength="12" name="rfc" id="rfc" required/><br/><br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="fecha">Fecha de la venta:</label>
+                        <input type="date" maxlength="25" name="fecha" id="fecha"/>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Datos del artículo adquirido</legend>
+            <table>
+                <tr>
+                    <td>
+                        <p>Tipo</p>
+                        <select size="5" multiple>
+                            <optgroup>
+                                <option>Vestido</option>
+                                <option>Falda</option>
+                                <option>Pantalón</option>
+                                <option>Playera</option>
+                                <option>Camisa</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                    <td>
+                        <p>Talla</p>
+                        <input type="checkbox" name="Chico" id="Chico" value="Chico"/>
+                        <label for="Chico">Chico</label><br/>
+                        <input type="checkbox" name="mediano" id="mediano" value="mediano"/>
+                        <label for="mediano">Mediano</label><br/>
+                        <input type="checkbox" name="grande" id="grande" value="grande"/>
+                        <label for="grande">Grande</label><br/>
+                    </td>
+                    <td>
+                        <label for="colores">Selecciona el color</label><br/><br/>
+                        <input type="color" name="colores" id="colores"/> 
+                        <br/><br/><br/><br/><input type="submit" name="enviar" id="enviar" value="Enviar datos"/>
+                        <input type="reset" name="borrar" id="borrar" value="Borrar datos"/>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+    <footer>
+        <br/><p align="right"><b>&copy; Distribuidora de ropa en línea 2023</b></p>
+    </footer>
+    <br/>
+</body>
+</html>
