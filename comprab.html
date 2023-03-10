@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinepolis</title>
+    <link rel="icon" type="Image/jpg" href="cine_logo.jpg"/>
+    <style>
+        body
+        {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        table
+        {
+            text-align: center;
+        }
+        td
+        {
+            width: 250px;
+            padding: 15px 90px;
+        }
+        td
+        {
+            height: 90px;
+        }
+        fieldset
+        {
+            color: blue;
+            border-color: blue;
+        }
+        a
+        {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <p align="center"><img src="cinepolis.png" width="300"></p><br/><br/>
+    <form action="" method="post" enctype="text/plain">
+        <fieldset>
+            <legend align="center">Película</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="estado">Selecciona una ciudad</label><br/><br/>
+                        <input type="text" name="estados" id="estados" list="estado" required/>
+                        <datalist id="estado">
+                            <option>San Luis Potosí</option>
+                            <option>Puebla</option>
+                            <option>Querétaro</option>
+                            <option>Monterrey</option>
+                            <option>Oaxaca</option>
+                            <option>CDMX</option>
+                            <option>Saltillo</option>
+                            <option>Zacatecas</option>
+                            <option>Guadalajara</option>
+                            <option>Hermosillo</option>
+                            <option>Chihuahua</option>
+                            <option>Aguascalientes</option>
+                    </td>
+                    <td>
+                        <label for="cine">Selecciona un cine</label><br/><br/>
+                        <input type="text" name="cines" id="cines" list="cine" required/>
+                        <datalist id="cine">
+                            <option>Cinepolis Plaza San Luis</option>
+                            <option>Cinepolis Plaza Sendero</option>
+                            <option>Cinepolis Plaza El Dorado</option>
+                            <option>Cinepolis Aguascalientes</option>
+                            <option>Cinepolis Plaza Tlatelolco</option>
+                            <option>Cinepolis Paseo Central</option>
+                            <option>Cinepolis Hermosillo</option>
+                            <option>Cinepolis Oaxaca</option>
+                            <option>Cinepolis Parque Puebla</option>
+                            <option>Cinepolis Interplaza Monterrey</option>
+                            <option>Cinepolis Alameda Guadalajara</option>
+                    </td>
+                    <td>
+                        <label for="funcion">Funciones</label><br/><br/>
+                        <input type="text" name="funciones" id="funciones" list="funcion" required/>
+                        <datalist id="funcion">
+                            <option>Ant-Man</option>
+                            <option>Mario Bros</option>
+                            <option>Scream 6</option>
+                            <option>EO</option>
+                            <option>La Ballena</option>
+                            <option>Shazam</option>
+                            <option>Academia De Conejos</option>
+                            <option>Las Momias</option>
+                            <option>Demoniaca</option>
+                            <option>Huesera</option>
+                            <option>Nada Que Ver</option>
+                            <option>Elvis</option>
+                            <option>Avatar</option>
+                            <option>Gato Con Botas</option>
+                        </datalist> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="fechayhora">Fecha y Hora</label><br/><br/>
+                        <input type="datetime-local" name="fechayhora" id="fechayhora" required/>
+                </tr>
+            </table>
+        </fieldset>
+        <br/><br/><br/>
+        <fieldset>
+            <legend align="center">Boletos</legend>
+            <table>
+                <tr>
+                    <p align="center">Cantidad de boletos</p>
+                    <td>
+                        <label for="cantidada">Adultos: </label>
+                        <input type="number" name="cantidada" id="cantidada" required/>
+                    </td>
+                    <td>
+                        <label for="cantidadn">Niños: </label>
+                        <input type="number" name="cantidadn" id="cantidadn" required/>
+                    </td>
+                    <td>
+                        <label for="cantidadn">Mayores: </label>
+                        <input type="number" name="cantidadn" id="cantidadn" required/>
+                    </td>
+                </tr>
+            </table>
+            <p align="right">
+                <br/><br/><input type="submit" name="enviar" id="enviar" value="Enviar datos"/>
+                <input type="reset" name="borrar" id="borrar" value="Borrar datos"/>
+            </p>
+        </fieldset>
+    </form>
+    <footer>
+        <table>
+            <tr>
+                <td>
+                    <a href="Practica_3.html">
+                        Regresar
+                    </a>
+                </td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>
+                    <p align="right">
+                        <a href="asientos.html">
+                            Siguiente
+                        </a>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </footer>
+</body>
+</html>
