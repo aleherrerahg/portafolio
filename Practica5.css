@@ -1,0 +1,47 @@
+body
+{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(13, 97, 69);
+    font: Verdana;
+}
+fieldset
+{
+    border-color: white;
+    color: white;
+}
+#titulo
+{
+    text-align: center;
+    font: sans-serif;
+    color: white;
+}
+#titulo1
+{
+    text-align: center;
+    font: Times;
+    color: white;
+}
+table
+{
+    align-content: center;
+    width: 75%;
+    text-align: center;
+    padding: 2%;
+}
+#ep
+{
+    text-align: justify;
+}
+#titulo2
+{
+    text-align: center;
+    color: white;
+    font-size: larger;
+}
+#titulo3
+{
+    text-align: center;
+    color: white;
+    font-size: small;
+}
