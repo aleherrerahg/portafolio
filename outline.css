@@ -1,0 +1,52 @@
+p.dotted
+{
+    outline-style: dotted;
+    outline-width: thin;
+    outline-color: rgb(253, 0, 0);
+}
+p.dashed
+{
+    outline-style: dashed;
+    outline-color: lightblue;
+}
+p.solid
+{
+    outline-style: solid;
+    outline-width: medium;
+    outline-color: rebeccapurple;
+}
+p.double
+{
+    outline-style: double;
+    outline-color: blue;
+}
+p.groove
+{
+    outline-style: groove;
+    outline-width: thick;
+    outline-color: lightgreen;
+}
+p.ridge
+{
+    outline-style: ridge;
+    outline-color: lightpink;
+}
+p.inset
+{
+    outline-style: inset;
+    outline-width: 5px;
+    outline-color: lightsalmon;
+}
+p.outset
+{
+    outline-style: outset;
+    outline-color: lightseagreen;
+}
+p.contorno 
+{
+    margin: 30px;
+    background: rgba(0, 255, 234, 0.342);
+    border: 1px solid rgb(0, 0, 0);
+    outline: 2px solid rgb(0, 225, 255);
+    outline-offset: 10px;
+}
