@@ -1,0 +1,88 @@
+body
+{
+   background-image: url("fondo.jfif");
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-attachment: fixed;
+   background-size: 100% 100%;
+}
+
+@font-face
+{
+    font-family: "Abril_Fatface";
+    src: url(Abril_Fatface/AbrilFatface-Regular.ttf);
+}
+#title
+{
+    display: block;
+    width: 400px;
+    border: 5px solid rgb(224, 0, 105);
+    font-family: 'Abril_Fatface', cursive;
+    text-align: center;
+    font-size: large;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 60px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+@font-face
+{
+    font-family: "Titanone";
+    src: url(Titan_One/TitanOne-Regular.ttf);
+}
+ul
+{
+    list-style: none;
+}
+.nav > li
+{
+    float: left;
+}
+.nav li
+{
+    
+    background-color:  black;
+    font-family: 'Titanone', cursive;
+    
+    color: rgba(255, 255, 255, 0.877);
+    padding: 10px 15px;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+@font-face
+{
+    font-family: "Lobster";
+    src: url(Lobster/Lobster-Regular.ttf);
+}
+.nav li:hover
+{
+    background-color:  rgba(0, 0, 0, 0.863);
+    font-family: 'Lobster', cursive;
+    letter-spacing: 0.2rem;
+    padding: 0.7rem 0.7rem;
+    color: #be377a;
+    animation: box 3s infinite;
+    cursor:pointer;
+}
+.nav li ul
+{
+    display: none;
+    position: absolute;
+}
+.nav li:hover > ul
+{
+    display: block;
+}
+.nav li ul li
+{
+    position: relative;
+}
+
+
+
