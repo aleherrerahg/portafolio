@@ -10,7 +10,7 @@ body
 @font-face
 {
     font-family: "Abril_Fatface";
-    src: url(Abril_Fatface/AbrilFatface-Regular.ttf);
+    src: url(AbrilFatface-Regular.ttf);
 }
 #title
 {
@@ -31,7 +31,7 @@ body
 @font-face
 {
     font-family: "Titanone";
-    src: url(Titan_One/TitanOne-Regular.ttf);
+    src: url(TitanOne-Regular.ttf);
 }
 ul
 {
@@ -58,7 +58,7 @@ ul
 @font-face
 {
     font-family: "Lobster";
-    src: url(Lobster/Lobster-Regular.ttf);
+    src: url(Lobster-Regular.ttf);
 }
 .nav li:hover
 {
