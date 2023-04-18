@@ -1,0 +1,120 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:  #d7f1eb46;
+}
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+#menu
+{
+    margin: auto;
+    width: 379px;
+}
+ul
+{
+    list-style: none;
+}
+.nav > li
+{
+    float: left;
+}
+.nav li a
+{
+    background-color:  #4ec7a9bd;
+    color: white;
+    text-decoration: none;
+    padding: 15px 12px;
+    display: block;
+}
+.nav li a:hover
+{
+    background-color:  rgba(68, 133, 124, 0.459);
+}
+.nav li ul
+{
+    display: none;
+    position: absolute;
+}
+.nav li:hover > ul
+{
+    display: block;
+}
+.nav li ul li
+{
+    position: relative;
+}
+.nav li ul li ul
+{
+    right: -175px;
+    top: 25px;
+}
+
+hr
+{
+    margin-top: -40px;
+    width: 75%;
+}
+h1
+{
+    font-family: 'Alkatra', cursive;
+    text-align: center;
+    background-color: #d7f1eb00;
+}
+.contenido
+{
+    border: 1%;
+    width: 20%;
+    margin: 6% 1%;
+    margin-bottom: 3%;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    line-height: 150%;
+    padding: 0% 5%;
+}
+.contenido1
+{
+    border: 1%;
+    width: 20%;
+    margin: 0% 1%;
+    margin-bottom: 3%;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    line-height: 150%;
+    padding: 0% 5%;
+}
+.preguntas
+{
+    font-weight: bold;
+    text-align: center;
+}
+
+footer
+{
+    background-color: #d7f1eb3d;
+}
+.redes
+{
+    border: 2px;
+    width: 20%;
+    margin: 2% 8%;
+    margin-bottom: 1%;
+    display: inline-block;
+    padding: 0% 6.5%;
+}
+h5
+{
+    font-family: 'Alkatra', cursive;
+    text-align: center;
+    background-color: #d7f1eb00;
+}
+h3
+{
+    font-family: 'Alkatra', cursive;
+    text-align: center;
+    background-color: #d7f1eb00;
+}
