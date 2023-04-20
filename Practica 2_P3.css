@@ -1,0 +1,19 @@
+body
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgba(92, 92, 92, 0.212);
+}
+div
+{
+    background-color: rgba(100, 100, 100, 0.288);
+    width: 40%;
+    height: 57%;
+    position: absolute;
+    top: 20%;
+    right: 30%;
+    border-radius: 1%;
+}
+p
+{
+    font-weight: bold;
+}

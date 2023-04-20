@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 3</title>
+    <script src="Practica 2_P3.js"></script>
+    <link rel="stylesheet" href="Practica 2_P3.css"/>
+</head>
+<body>
+    <h1 align="center">Operaciones matemáticas</h1>
+    <div>
+        <center>
+            <br/><br/><br/>
+            <form method="post" action="" enctype="text/plain">
+                <label for="num1">Escribe un número:</label><br/>
+                <input type="text" name="num1" id="num1"/><br/><br/><br/>
+                <label for="num2">Escribe un número:</label><br/>
+                <input type="text" name="num2" id="num2"/><br/><br/><br/>
+                <input type="button" name="sumar" value="Sumar" onclick="suma()">
+                <input type="button" name="restar" value="Restar" onclick="resta()">
+                <input type="button" name="multiplicar" value="Multiplicar" onclick="multi()">
+                <input type="button" name="dividir" value="Dividir" onclick="divi()">
+            </form>
+            <br/><br/><h4>El resultado es: </h4>
+            <p id="resultado" name="resultado"></p><br/><br/>
+        </center>
+    </div>
+</body>
+</html>
