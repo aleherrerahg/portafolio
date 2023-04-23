@@ -1,0 +1,135 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:  #d7f1eb46;
+}
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+#menu
+{
+    margin: auto;
+    width: 379px;
+}
+ul
+{
+    list-style: none;
+}
+.nav > li
+{
+    float: left;
+}
+.nav li a
+{
+    background-color:  #4ec7a9bd;
+    color: white;
+    text-decoration: none;
+    padding: 15px 12px;
+    display: block;
+}
+.nav li a:hover
+{
+    background-color:  rgba(68, 133, 124, 0.459);
+}
+.nav li ul
+{
+    display: none;
+    position: absolute;
+}
+.nav li:hover > ul
+{
+    display: block;
+}
+.nav li ul li
+{
+    position: relative;
+}
+.nav li ul li ul
+{
+    right: -175px;
+    top: 25px;
+}
+#cajaformulario
+{
+    float: left;
+    padding: 5%;
+    border: 2px solid #00b4ab;
+}
+#cajadatos
+{
+    float: right;
+    width: 40%;
+    padding: 10% 5%;
+    border: 2px solid #00b4ab;
+}
+textarea
+{
+    padding: 5% 0%;
+    margin: 6% 0%;
+    border: 2px solid #12998e;
+    background-color:  #d7f1eb46;
+    border-radius: 5px;
+}
+#clave, #texto
+{
+   width: 100%;
+}
+#cajadatos > div
+{
+    padding: 3%;
+    background-color:  #d7f1eb71;
+    border-bottom: 1px solid #ffffff;
+}
+
+input[type=text]
+{
+    width: 100%;
+    padding: 5%;
+    margin: 8% 0;
+    border: 2px solid #12998e;
+    background-color:  #d7f1eb46;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type=button]
+{
+    width: 100%;
+    background-color:#00706a79;
+    color: rgb(63, 42, 100);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=button]:hover 
+{
+    background-color: #00b4abc7;
+}
+
+div 
+{
+    border-radius: 15px;
+    padding: 20px;
+}
+
+section
+{
+    margin: 50px;
+}
+
+hr
+{
+    margin-top: -40px;
+    width: 75%;
+}
+h1
+{
+    font-family: 'Alkatra', cursive;
+    text-align: center;
+    background-color: #d7f1eb00;
+}

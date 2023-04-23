@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="Blog.css"/>
+    <script src="Blog.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="menu">
+        <ul class="nav">
+            <li><a href="Inicio.html">Inicio</a>
+                <ul>
+                    <li><a href="Test.html">Test</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                </ul>
+            </li>
+            <li><a href="Beneficios.html">Beneficios</a>
+                <ul>
+                    <li><a href="Benevista.html">Personas con discapacidades visuales</a></li>
+                </ul>
+            </li>
+            <li><a href="Productos1.html">Productos</a>
+                <ul>
+                    <li><a href="Tutoriales.html">Tutoriales</a></li>
+                </ul>
+            </li>
+             <li><a href="">Contáctanos&nbsp;</a>
+                <ul>
+                    <li><a href="Preguntasfrecuentes.html">Preguntas frecuentes</a></li>
+                    <li><a href="Chat.html">Chat</a></li>
+                </ul>
+            </li>
+        </ul>
+        <br/><br/><br/><br/>
+    </div>
+    <br/><h1>¡Cuentanos tu experiencia!</h1><br/><br/><br/>
+    <center>
+        <hr color="#81CDC1" noshade/>
+    </center>
+    <br/><br/>
+    <section id="cajaformulario">
+        <form name="formulario">
+            <p>Nombre de usuario:<br><input type="text" name="clave" id="clave"></p>
+            <p>Reseña:<br><textarea name="text" id="texto"></textarea></p>
+            <input type="button" name="guardar" id="guardar" value="Guardar">
+            <input type="button" name="eliminar" id="eliminar" value="Borrar datos" onclick="elimina()">
+        </form>
+    </section>
+    <section id="cajadatos">
+        Aún no registras información
+    </section>
+</body>
+</html>
