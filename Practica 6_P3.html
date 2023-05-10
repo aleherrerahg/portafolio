@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 6</title>
+    <style>
+        body
+        {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table
+        {
+            background-color: rgba(235, 235, 235, 0.5);
+            border: 1px solid rgb(177, 176, 176);
+            text-align: center;
+            border-collapse: collapse;
+        }
+        th, td
+        {
+            border: 2px solid rgb(177, 176, 176);
+            padding: auto;
+            width: 600px;
+        }
+        thead
+        {
+            background-color: rgba(177, 175, 175, 0.877);
+        }
+        th
+        {
+            height: 50px;
+        }
+        td
+        {
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">WORKERS API</h1>
+   <br/>
+    <h3 align="center">¿Qué es una API?</h3>
+    <p align="center">
+        Es una pieza de código que permite a diferentes aplicaciones comunicarse entre sí y compartir información y funcionalidades.
+    </p><br/><br/><br/>
+    <table align="center">
+        <thead>
+            <tr>
+                <th width="30%">Web worker</th>
+                <th>Función</th>
+            </tr>
+        </thead>    
+        <tr>
+            <td>Es un JavaScript que se ejecuta en segundo plano, sin afectar el rendimiento de la página.</td>
+            <td>Permite que los scripts se ejecuten en segundo plano sin interrumpir la experiencia del usuario en la página web. </td>
+        </tr>
+    </table><br/><br/><br/><br/>
+    <h4 align="center">AHORA UN EJEMPLO</h4><br/>
+    <p align="center">El siguiente web worker nos ayudará a saber cuál es el tiempo que tarda en leer el siguiente fragmento</p>
+    <br/><br/>
+    <div align="center">
+        <p>Cronometro: <output id="result"></output> s</p>
+        <button onclick="startWorker()">Iniciar</button>
+        <script>
+            let w;
+    
+            function startWorker() {
+            if (typeof(w) == "undefined") {
+                w = new Worker("Practica 6_P3.js");
+            }
+            w.onmessage = function(event) {
+                document.getElementById("result").innerHTML = event.data;
+            };
+            }
+    
+            function stopWorker() {
+            w.terminate();
+            w = undefined;
+            }
+        </script>
+        <br/><br/><br/>
+        <p><img src="fragmento.png" width="500px"></p>
+        <br/><br/>
+        <button onclick="stopWorker()">Parar</button>
+    </div>
+</body>
+</html>
