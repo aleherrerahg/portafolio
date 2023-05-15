@@ -63,9 +63,8 @@ p
 #pdf
 {
     top: 800px;
-    width: 50%;
+    width: 30%;
     height: 500px;
-    border: 2px solid #00b4ab;
     position: relative;
     right: -100px;
 }
