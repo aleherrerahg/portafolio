@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 2</title>
+    <script src="Actividad 2_P3.js"></script>
+    <link rel="stylesheet" href="Actividad 2_P3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Lobster&display=swap" rel="stylesheet">
+    
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="jspdf.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+</head>
+<script>
+    function generar()
+    {
+        //Crear un objeto o instancia jsPDF
+        var doc= new jsPDF();
+
+        //Definir tamaño de la letra
+        doc.setFontSize(40);
+
+        //Color de Texto
+        doc.setTextColor(9,7,121);  
+        doc.text(40,20,"ENCUESTA");
+        doc.setTextColor(17,122,209); //Color formato RGB
+        doc.setFontSize(30);
+        doc.text(50,35,"Es importante tu particpación"); //Ubicación y texto
+        doc.setTextColor(0,0,0);
+        doc.setFontSize(20);
+        doc.text(20,50,"20 Puntos Excelente. \r Todas tus respuestas son correctas.");
+        doc.text(20,70,"15 Puntos Bien. \r Todas tus respuestas son correctas.");
+        doc.text(20,90,"10 Puntos Regular. \r Todas tus respuestas son correctas.");
+        doc.text(20,110,"5 Puntos Mal. \r Todas tus respuestas son correctas.");
+        var string=doc.output('datauristring');
+        $('iframe').attr('src',string);
+    }
+</script>
+<body>
+    <h2>Responde la siguiente encuesta sobre html básico</h2><br/>
+    <section id="formulario">
+        <form>
+            <div>
+                <ul>
+                    <li>¿Qué etiqueta utilizamos para definir el cuerpo del documento?</li><br/>
+                    <input type="radio" name="r1" id="r1" value="5">body<br/><!--Respuesta correcta-->
+                    <input type="radio" name="r1" id="r1" value="0">background<br/>
+                    <input type="radio" name="r1" id="r1" value="0">div<br/>
+                    <input type="radio" name="r1" id="r1" value="0">br<br/><br/>
+    
+                    <li>¿Qué etiqueta utilizamos para insertar una línea horizontal?</li><br/>
+                    <input type="radio" name="r2" id="r2" value="0">line<br/>
+                    <input type="radio" name="r2" id="r2" value="5">hr<br/><!--Respuesta correcta-->
+                    <input type="radio" name="r2" id="r2" value="0">td<br/>
+                    <input type="radio" name="r2" id="r2" value="0">form<br/><br/>
+    
+                    <li>¿Cuál es la forma correcta de insertar un comentario?</li><br/>
+                    <input type="radio" name="r3" id="r3" value="0"><"p"><br/>
+                    <input type="radio" name="r3" id="r3" value="0"><"comment"><br/>
+                    <input type="radio" name="r3" id="r3" value="5"><"!--...--"><br/><!--Respuesta correcta-->
+                    <input type="radio" name="r3" id="r3" value="0"><"¡--...--!"><br/><br/>
+    
+                    <li>Elija la etiqueta apropiada para un texto en negrita.</li><br/>
+                    <input type="radio" name="r4" id="r4" value="5">bold<br/><!--Respuesta correcta-->
+                    <input type="radio" name="r4" id="r4" value="0">black<br/>
+                    <input type="radio" name="r4" id="r4" value="0">n<br/>
+                    <input type="radio" name="r4" id="r4" value="0">bb<br/><br/>
+    
+                    <li>¿Qué etiqueta define un salto de línea?</li><br/>
+                    <input type="radio" name="r5" id="r5" value="0">bold<br/>
+                    <input type="radio" name="r5" id="r5" value="0">div<br/>
+                    <input type="radio" name="r5" id="r5" value="0">break<br/>
+                    <input type="radio" name="r5" id="r5" value="5">br<br/><br/><!--Respuesta correcta-->
+                </ul>
+            </div>
+            <input type="button" value="calificar" onclick="califica()"><!--Botón que llama a la función-->
+           <input type="button" value="generar" onclick="generar()"> 
+        </form>
+    </section>
+    <section id="resultados">
+        <p id="total">   </p>
+        <p id="comentario">   </p>
+    </section>
+  <iframe frameborder="0" width="600" height="500" name=""></iframe> 
+</body>
+</html>
