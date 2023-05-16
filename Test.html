@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
     <link rel="stylesheet" href="Test.css"/>
+    <script src="Test.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Lobster&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="jspdf.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
 </head>
+
+<script>
+    function generar()
+    {
+        //Crear objeto o instancia en js
+         var doc = new jsPDF();
+        //Tamaño de letra
+        doc.setFontSize(40);
+        //Color del texto
+        doc.setTextColor(9,7,121);
+        doc.Text(40, 20, "Encuesta");
+        doc.setTextColor(17,122,209);
+        doc.setFontSize(30);
+        doc.text(50,35, "Es importante tu participación");
+        doc.setFontSize(20);
+        doc.text(20,50, "25 puntos. Excelente. \r Todas tus respuestas son correctas");
+        doc.text(20,70, "20 puntos. Muy bien. \r Obtuviste 4 respuestas correctas");
+        doc.text(20,90, "15 puntos. Regular. \r Obtuviste 3 respuestas correctas");
+        doc.text(20,110, "10 puntos. Mal \r Obtuviste 2 respuestas correctas");
+        doc.text(20,130, "5 puntos. Muy mal. \r Obtuviste 1 respuesta correcta");
+        doc.text(20,150, "0 puntos. Terrible. \r Todas tus respuestas son incorrectas");
+        
+        var string = doc.output('datauristring');
+        $('iframe').attr('src',string);
+    }
+</script>
 <body>
     <div id="menu">
         <ul class="nav">
@@ -66,5 +102,50 @@
         </form>
     </div>
     <br/><br/><br/>
+    <section id="formulario1">
+        <h2>Responde el siguiente formulario para medir tu conocimiento</h2><br/>
+        <form>
+            <div class="form">
+                <ul>
+                    <li>¿Qué es una alexa?</li><br/>
+                    <input type="radio" name="r1" id="r1" value="5">Asistente virtual<br/><!--Respuesta correcta-->
+                    <input type="radio" name="r1" id="r1" value="0">Televisor<br/>
+                    <input type="radio" name="r1" id="r1" value="0">Bocina<br/>
+                    <input type="radio" name="r1" id="r1" value="0">Cámara<br/><br/>
+    
+                    <li>Elija la acción que Alexa No puede realizar</li><br/>
+                    <input type="radio" name="r2" id="r2" value="0">Reproducir música<br/>
+                    <input type="radio" name="r2" id="r2" value="5">Llamar al 911<br/><!--Respuesta correcta-->
+                    <input type="radio" name="r2" id="r2" value="0">Listas de supermercado<br/>
+                    <input type="radio" name="r2" id="r2" value="0">Programar alarmas<br/><br/>
+    
+                    <li>¿Cuál es la forma correcta para reproducir música en Spotify?</li><br/>
+                    <input type="radio" name="r3" id="r3" value="0">"Alexa Spotify."<br/>
+                    <input type="radio" name="r3" id="r3" value="0">"Reproduce Spotify."<br/>
+                    <input type="radio" name="r3" id="r3" value="5">"Alexa, pon música en Spotify."<br/><!--Respuesta correcta-->
+                    <input type="radio" name="r3" id="r3" value="0">"Alexa, abre Spotify."<br/><br/>
+    
+                    <li>¿Qué compañia creeo a Alexa</li><br/>
+                    <input type="radio" name="r4" id="r4" value="5">Amazon<br/><!--Respuesta correcta-->
+                    <input type="radio" name="r4" id="r4" value="0">Mercado libre<br/>
+                    <input type="radio" name="r4" id="r4" value="0">Aliexpress<br/>
+                    <input type="radio" name="r4" id="r4" value="0">Wish<br/><br/>
+                    
+                    <li>Echo es una bocina inteligente que se controla con la voz y te conecta con Alexa a través de red Wi-Fi.</li><br/>
+                    <input type="radio" name="r5" id="r5" value="0">Falso<br/>
+                    <input type="radio" name="r5" id="r5" value="5">Verdadero<br/><br/><!--Respuesta correcta-->
+                </ul>
+            </div>
+            <input type="button" value="Calificar" onclick="califica()"><!--Botón que llama a la función-->
+           <input type="button" value="Generar pdf" onclick="generar()"> 
+        </form>
+    </section>
+    <section id="resultados">
+        <p id="total">   </p>
+        <p id="comentario">   </p>
+    </section>
+    <section id="pdf">
+        <iframe frameborder="0" width="600" height="500" name=""></iframe> 
+    </section>
 </body>
 </html>
