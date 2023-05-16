@@ -52,6 +52,69 @@ ul
     top: 25px;
 }
 
+
+h2
+{
+    text-align: center;
+    font-family: 'Alkatra', cursive;
+}
+.form li
+{
+    text-align: justify;
+    width: 500px;
+}
+#formulario1 input
+{
+    text-align: left;
+}
+#formulario1 input[type=button]
+{
+    width: 20%;
+    background-color:#00706a79;
+    color: rgb(255, 255, 255);
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    padding: 5px;
+    position: relative;
+    left: 250px;
+    width: 30%;
+}
+#formulario1 input[type=button]:hover 
+{
+    background-color: #01a39bc7;
+}
+#resultados p
+{
+    text-align: center;
+}
+#formulario1
+{
+    float: left;
+    position: relative;
+    left: 250px;
+    width: 50%;
+}
+#resultados
+{
+    float: right;
+    width: 20%;
+    padding: 5% 2%;
+    border: 2px solid #00b4ab;
+    position: relative;
+    right: 100px;
+}
+#pdf
+{
+    top: 100px;
+    width: 30%;
+    height: 500px;
+    position: relative;
+    right: -100px;
+}
+
 #formulario 
 {
     margin: auto;
