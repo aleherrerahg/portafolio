@@ -23,5 +23,5 @@ function califica()
             document.getElementById("comentario").innerHTML="Regular";
     else
         if(total<=15)//si su puntuaciÃ³n es menor o igual a 15, se le dirÃ¡ al usuario que necesita estudiar mÃ¡s
-        document.getElementById("comentario").innerHTML="Estudia un poco m&#193s";
+        document.getElementById("comentario").innerHTML="Estudia un poco m&#225s";
 }
