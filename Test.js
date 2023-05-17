@@ -17,11 +17,11 @@ function califica()
         document.getElementById("total").innerHTML="Puntos obtenidos: "+total;
     }
     if(total==25)//si su puntuaciÃ³n es igual a 25, se le dirÃ¡ al usuario que su conocimiento es excelente
-        document.getElementById("comentario").innerHTML="Â¡EXCELENTE!";
+        document.getElementById("comentario").innerHTML="¡EXCELENTE!";
     else
         if(total==20)//si su puntuaciÃ³n es igual a 20, se le dirÃ¡ al usuario que su conocimiento es regular
             document.getElementById("comentario").innerHTML="Regular";
     else
         if(total<=15)//si su puntuaciÃ³n es menor o igual a 15, se le dirÃ¡ al usuario que necesita estudiar mÃ¡s
-        document.getElementById("comentario").innerHTML="Estudia un poco mÃ¡s";
+        document.getElementById("comentario").innerHTML="Estudia un poco m&#193s";
 }
