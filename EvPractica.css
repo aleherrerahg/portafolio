@@ -1,0 +1,21 @@
+body
+{
+    font-family: 'Dancing Script', cursive;
+    font-size: larger;
+}
+h1
+{
+    font-family: 'Lobster', cursive;
+}
+input[type=submit]:hover
+{
+    width: 50%;
+    background-color: #ca81cde1;
+    border: #ca81cd86 4px solid;
+}
+input[type=submit]
+{
+    width: 50%;
+    background-color:#ca81cd86;
+    border: #ca81cd2d 4px solid;
+}
