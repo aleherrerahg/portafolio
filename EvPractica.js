@@ -1,12 +1,10 @@
 function Promo()
 {
     let x=document.getElementById("fecha").value;
-    alert(" ");
     var mes = x.substring(5, 7);
     let texto="";
     con=(mes);
-    alert(con);
-    if(mes==05)
+    if(con==05)
     {
         document.getElementById("comentario").innerHTML="Felicidades, obtuviste un 2*1";
         texto+="<img src='promocion.webp'>"
