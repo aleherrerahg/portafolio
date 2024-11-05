@@ -6,57 +6,80 @@
     <title>Mapa de la Fiesta</title>
     <link rel="icon" type="image/png" href="mapa.png"/>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            background-color: #ffffff;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         header {
-            background-color: #bd176aa1;
+            background-color: #d14388d7;
             color: white;
             text-align: center;
-            padding: 10px 0;
+            padding: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
         }
         .container {
             display: flex;
-            flex-direction: column; /* Cambiar a columna para dispositivos pequeños */
-            align-items: center; /* Centrar elementos */
+            flex-direction: column;
+            align-items: center;
             padding: 20px;
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
         }
         iframe {
             border: 0;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 100%; /* Ancho del iframe al 100% */
-            max-width: 800px; /* Máximo ancho para el iframe */
-            height: 450px; /* Altura fija para el iframe */
-            margin-bottom: 20px; /* Espacio entre el mapa y la imagen */
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            transition: transform 0.3s ease;
+        }
+        iframe:hover {
+            transform: scale(1.02);
+        }
+        .direccion {
+            text-align: center;
+            font-size: 1.1em;
+            color: #b61e68;
+        }
+        hr {
+            width: 90%;
+            color: #b61e68;
+            border: none;
+            height: 2px;
+            background-color: #b61e68;
+            margin: 20px 0;
         }
         img {
-            width: 100%; /* Ancho de la imagen al 100% */
-            max-width: 300px; /* Máximo ancho para la imagen */
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        img:hover {
+            transform: scale(1.05);
         }
         footer {
             text-align: center;
-            padding: 10px 0;
-            background-color: #bd176aa1;
+            padding: 15px;
+            background-color: #d14388d7;
             color: white;
-            position: relative; 
+            font-size: 1em;
+            position: relative;
             width: 100%;
-        }
-        
-        /* Media query para pantallas más grandes */
-        @media (min-width: 768px) {
-            .container {
-                flex-direction: row; /* Cambiar a fila en pantallas más grandes */
-            }
-            iframe {
-                margin-right: 20px; /* Espacio entre el mapa y la imagen */
-            }
+            margin-top: auto;
         }
     </style>
 </head>
@@ -68,9 +91,12 @@
         <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d923.7202206104355!2d-100.92402353049941!3d22.168605840703655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842aa16fe85f5759%3A0xa2a1065dd03d36fe!2sC.%20Ladislao%20Garc%C3%ADa%20405%2C%20Rancho%20Blanco%2C%2078436%20Soledad%20de%20Graciano%20S%C3%A1nchez%2C%20S.L.P.!5e0!3m2!1ses-419!2smx!4v1728968567268!5m2!1ses-419!2smx" 
             allowfullscreen 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
+            loading="lazy">
         </iframe>
+        <div class="direccion">
+            <p>Dirección: Calle Ladislao Garcia #405, A 100m de av. San Pedro</p>
+        </div>
+        <hr/>
         <img src="Salon.jpg" alt="Salón de la Fiesta">
     </div>
     <footer>
